@@ -76,12 +76,16 @@
 	<classpathentry kind="lib" path="lib/jackson-core-2.0.0.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-databind-2.0.0.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-dataformat-smile-2.0.0.jar"/>
-	<classpathentry kind="lib" path="lib/jackson-dataformat-xml-2.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-module-afterburner-2.0.0.jar"/>
 	<classpathentry kind="lib" path="lib/asm-4.0.jar"/>
 	<classpathentry kind="lib" path="lib/objenesis-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/fastjson-1.1.19.jar"/>
 	<classpathentry kind="lib" path="lib/kryo-2.16.jar"/>
 	<classpathentry kind="lib" path="lib/reflectasm-1.05.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-dataformat-xml-2.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/hppc-0.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-dataformat-yaml-2.0.2.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lightning-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lightning-core"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
