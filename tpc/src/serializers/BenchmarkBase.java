@@ -456,6 +456,13 @@ abstract class BenchmarkBase
 
                                 warmTest(runner, params.warmupTime, testCreate);
                                 warmTest(runner, params.warmupTime, testSerialize);
+
+                                // Give JIT some time to do his work...
+                                try {
+                                    Thread.sleep(2000);
+                                } catch (InterruptedException ex) {
+                                    System.err.println("Interrupted while sleeping in serializers.BenchmarkBase.runMeasurements()");
+                                }
                         }
                         System.out.println();
                         System.out.println("[done]");
@@ -554,7 +561,7 @@ abstract class BenchmarkBase
         // Instead of fixed counts, let's try to prime by running for N seconds
         long endTime = System.currentTimeMillis() + warmupTime;
         do {
-            runner.run(test, 10);
+            runner.run(test, 1000);
         }
         while (System.currentTimeMillis() < endTime);
     }
@@ -744,6 +751,7 @@ abstract class BenchmarkBase
     // most likely to give it a chance to do it.
     protected static void doGc()
     {
+    	System.runFinalization();
         try {
             Thread.sleep(50L);
         } catch (InterruptedException ie) {
